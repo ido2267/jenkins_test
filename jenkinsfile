@@ -1,0 +1,17 @@
+pipeline {
+  
+    stages {
+        stage('checkout') {
+            steps {
+               git 'https://github.com/ido2267/devops_2.git'
+            }
+        }
+    }
+         stage('build') {
+            steps {
+               bat 'python exercise3.py'
+            }
+         }
+        }
+    }
+}
